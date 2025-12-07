@@ -187,11 +187,7 @@ var response = await request.send();
 
 ---
 
-## 📥 APK Download (Optional)
 
-If you upload an APK later, add:
-
-👉 **Download APK (coming soon)**
 
 ---
 
