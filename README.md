@@ -6,7 +6,8 @@
 ![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
 
-> **Phase 3 of the AI-Powered Plant Disease Detection System** > *Developed by [Abhyuday Pratap Singh](https://github.com/Abhii9180)*
+> **Phase 3 of the AI-Powered Plant Disease Detection System**
+> *Developed by [Abhyuday Pratap Singh](https://github.com/Abhii9180)*
 
 ---
 
@@ -25,6 +26,16 @@ A cross-platform mobile application built with **Flutter** designed to empower f
 
 ---
 
+## 📸 App Screenshots
+
+<p align="center">
+  <img src="screenshots/home.png" width="200" alt="Home Screen">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="screenshots/result.png" width="200" alt="Result Screen">
+</p>
+
+---
+
 ## 🌐 Project Ecosystem & Architecture
 
 This mobile app is the final layer of a complete End-to-End AI pipeline.
@@ -37,11 +48,7 @@ graph TD
     D -->|Prediction| C
     C -->|JSON Response| B
     B -->|Display Results| A
-
-
-
-
-    1️⃣ Model Training (The Brain)
+1️⃣ Model Training (The Brain)
 Architecture: MobileNetV2 (Transfer Learning)
 
 Dataset: PlantVillage (38 Disease Classes)
@@ -71,35 +78,34 @@ Analyze: Image is sent to the Flask API via HTTP POST.
 
 Predict: API returns a JSON response:
 
+JSON
 
 {
   "predicted_class": "Tomato — Early Blight",
   "confidence": 0.945
 }
-
-
 Display: User sees the disease name and confidence percentage.
-
 
 🛠️ Tech Stack
 Frontend (Mobile)
+Technology	Usage
+Flutter	Cross-platform framework
+Dart	Programming logic
+Image Picker	Camera & Gallery access
+HTTP	Asynchronous API calls
 
-Technology,Usage
-Flutter,Cross-platform framework
-Dart,Programming logic
-Image Picker,Camera & Gallery access
-HTTP,Asynchronous API calls
-
+Export to Sheets
 
 Backend (AI Service)
+Technology	Usage
+Flask	REST API creation
+TensorFlow	Model inference engine
+Render	Cloud deployment
 
-Technology,Usage
-Flask,REST API creation
-TensorFlow,Model inference engine
-Render,Cloud deployment
-
+Export to Sheets
 
 📂 Folder Structure
+Bash
 
 Plant_Disease_App/
 │
@@ -107,7 +113,7 @@ Plant_Disease_App/
 │   ├── main.dart               # 🏁 App entry point
 │   ├── screens/
 │   │   ├── home_screen.dart    # 📸 Capture & Upload UI
-│   │   └── result_screen.dart  # 📊 Prediction Display
+│   │   ├── result_screen.dart  # 📊 Prediction Display
 │   ├── services/
 │   │   └── api_service.dart    # 🔌 API Logic (HTTP)
 │   └── widgets/
@@ -117,32 +123,33 @@ Plant_Disease_App/
 ├── ios/                        # 🍎 Native iOS config
 ├── pubspec.yaml                # 📦 Dependencies
 └── README.md                   # 📄 Documentation
-
-
-
-
 🚀 Installation & Setup
 Follow these steps to run the app locally on your machine.
 
-
 1️⃣ Clone the Repository
+Bash
 
-git clone [https://github.com/Abhii9180/PlantDiseaseApp.git](https://github.com/Abhii9180/PlantDiseaseApp.git)
+git clone https://github.com/Abhii9180/PlantDiseaseApp.git
 cd PlantDiseaseApp
-
-
 2️⃣ Install Dependencies
+Bash
+
 flutter pub get
+3️⃣ Run the App
+Select your target device (Emulator or Physical) and run:
 
+Bash
 
-
+flutter run
 🔗 Code Highlight: API Integration
 Here is how the Flutter app communicates with the Python backend:
+
+Dart
 
 // Example of the POST request logic in api_service.dart
 var request = http.MultipartRequest(
   'POST',
-  Uri.parse("[https://plant-disease-api.onrender.com/predict](https://plant-disease-api.onrender.com/predict)"),
+  Uri.parse("https://plant-disease-api.onrender.com/predict"),
 );
 
 // Add the image file
@@ -152,27 +159,12 @@ request.files.add(
 
 // Send request and await response
 var response = await request.send();
-
 📥 APK Download
 Want to try it out without compiling?
-Image of Android Logo
-Shutterstock
 
-Download the Latest Release (.apk)
-
-)
+<a href="YOUR_APK_DRIVE_LINK_HERE"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="150" alt="Download APK"> </a>
 
 👨‍💻 Developer
 Abhyuday Pratap Singh AI & Full-Stack Developer
 
 Skills: Flutter • Python • Machine Learning • Cloud Technologies
-
-
-
-```markdown
-<p align="center">
-  <img src="screenshots/home.png" width="200" alt="Home Screen">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="screenshots/result.png" width="200" alt="Result Screen">
-</p>
-
