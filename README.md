@@ -1,4 +1,3 @@
-
 # 🌿 Plant Disease Detection – Mobile Application
 
 ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
@@ -38,11 +37,71 @@ graph TD
     D -->|Prediction| C
     C -->|JSON Response| B
     B -->|Display Results| A
-1️⃣ Model Training (The Brain)Architecture: MobileNetV2 (Transfer Learning)Dataset: PlantVillage (38 Disease Classes)Accuracy: ~97% (Fine-tuned)Output: plant_mnv2.keras2️⃣ Backend (The Bridge)Framework: Flask (Python)Deployment: Render Cloud HostingEndpoint: https://plant-disease-api.onrender.com/predict3️⃣ Mobile App (The Interface)Framework: Flutter (Dart)Role: Image acquisition, compression, and result visualization.🧠 How It WorksCapture: User takes a photo of a plant leaf.Compress: App optimizes image size for faster transmission.Analyze: Image is sent to the Flask API via HTTP POST.Predict: API returns a JSON response:JSON{
+
+
+
+
+    1️⃣ Model Training (The Brain)
+Architecture: MobileNetV2 (Transfer Learning)
+
+Dataset: PlantVillage (38 Disease Classes)
+
+Accuracy: ~97% (Fine-tuned)
+
+Output: plant_mnv2.keras
+
+2️⃣ Backend (The Bridge)
+Framework: Flask (Python)
+
+Deployment: Render Cloud Hosting
+
+Endpoint: https://plant-disease-api.onrender.com/predict
+
+3️⃣ Mobile App (The Interface)
+Framework: Flutter (Dart)
+
+Role: Image acquisition, compression, and result visualization.
+
+🧠 How It Works
+Capture: User takes a photo of a plant leaf.
+
+Compress: App optimizes image size for faster transmission.
+
+Analyze: Image is sent to the Flask API via HTTP POST.
+
+Predict: API returns a JSON response:
+
+
+{
   "predicted_class": "Tomato — Early Blight",
   "confidence": 0.945
 }
-Display: User sees the disease name and confidence percentage.🛠️ Tech StackFrontend (Mobile)TechnologyUsageFlutterCross-platform frameworkDartProgramming logicImage PickerCamera & Gallery accessHTTPAsynchronous API callsBackend (AI Service)TechnologyUsageFlaskREST API creationTensorFlowModel inference engineRenderCloud deployment📂 Folder StructureBashPlant_Disease_App/
+
+
+Display: User sees the disease name and confidence percentage.
+
+
+🛠️ Tech Stack
+Frontend (Mobile)
+
+Technology,Usage
+Flutter,Cross-platform framework
+Dart,Programming logic
+Image Picker,Camera & Gallery access
+HTTP,Asynchronous API calls
+
+
+Backend (AI Service)
+
+Technology,Usage
+Flask,REST API creation
+TensorFlow,Model inference engine
+Render,Cloud deployment
+
+
+📂 Folder Structure
+
+Plant_Disease_App/
 │
 ├── lib/
 │   ├── main.dart               # 🏁 App entry point
@@ -58,11 +117,29 @@ Display: User sees the disease name and confidence percentage.🛠️ Tech Stack
 ├── ios/                        # 🍎 Native iOS config
 ├── pubspec.yaml                # 📦 Dependencies
 └── README.md                   # 📄 Documentation
-🚀 Installation & SetupFollow these steps to run the app locally on your machine.1️⃣ Clone the RepositoryBashgit clone [https://github.com/Abhii9180/PlantDiseaseApp.git](https://github.com/Abhii9180/PlantDiseaseApp.git)
+
+
+
+
+🚀 Installation & Setup
+Follow these steps to run the app locally on your machine.
+
+
+1️⃣ Clone the Repository
+
+git clone [https://github.com/Abhii9180/PlantDiseaseApp.git](https://github.com/Abhii9180/PlantDiseaseApp.git)
 cd PlantDiseaseApp
-2️⃣ Install DependenciesBashflutter pub get
-3️⃣ Run the AppSelect your target device (Emulator or Physical) and run:Bashflutter run
-🔗 Code Highlight: API IntegrationHere is how the Flutter app communicates with the Python backend:Dart// Example of the POST request logic in api_service.dart
+
+
+2️⃣ Install Dependencies
+flutter pub get
+
+
+
+🔗 Code Highlight: API Integration
+Here is how the Flutter app communicates with the Python backend:
+
+// Example of the POST request logic in api_service.dart
 var request = http.MultipartRequest(
   'POST',
   Uri.parse("[https://plant-disease-api.onrender.com/predict](https://plant-disease-api.onrender.com/predict)"),
@@ -75,15 +152,22 @@ request.files.add(
 
 // Send request and await response
 var response = await request.send();
-📥 APK DownloadWant to try it out without compiling?ShutterstockDownload the Latest Release (.apk)👨‍💻 DeveloperAbhyuday Pratap SinghAI & Full-Stack DeveloperSkills: Flutter • Python • Machine Learning • Cloud Technologies
----
 
-### 💡 Recommendation for the "Screenshots"
-To make this truly attractive, you **must** add screenshots.
-1.  Take a screenshot of the Home Screen (Camera view).
-2.  Take a screenshot of the Result Screen (Disease prediction).
-3.  Place them in a folder named `screenshots` in your repo.
-4.  Add this code under the "App Overview" section:
+📥 APK Download
+Want to try it out without compiling?
+Image of Android Logo
+Shutterstock
+
+Download the Latest Release (.apk)
+
+)
+
+👨‍💻 Developer
+Abhyuday Pratap Singh AI & Full-Stack Developer
+
+Skills: Flutter • Python • Machine Learning • Cloud Technologies
+
+
 
 ```markdown
 <p align="center">
@@ -91,3 +175,4 @@ To make this truly attractive, you **must** add screenshots.
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img src="screenshots/result.png" width="200" alt="Result Screen">
 </p>
+
