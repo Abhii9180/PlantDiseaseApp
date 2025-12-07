@@ -216,15 +216,6 @@ request.files.add(
 
 );// Send request and await responsevar response = await request.send();
 
-📥 APK Download
-
-Want to try it out without compiling?
-
-<a href="YOUR_APK_DRIVE_LINK_HERE">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" width="150" alt="Download APK">
-
-</a>
 
 👨‍💻 Developer
 
